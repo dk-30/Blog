@@ -1,0 +1,11 @@
+{% block content %}
+
+{% for i in n %}
+
+<b>{{ i.username }}<b><br>
+    <br>
+   <b> <a href="{% url 'profile1' i.id %}">profile</a></b><br> <br>
+
+{% endfor %}
+
+{% endblock %}

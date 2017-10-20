@@ -1,0 +1,19 @@
+{% block content %}
+
+<h2 align="center">This Is Your Home Page</h2>
+<br>
+<br>
+<br>
+&nbsp &nbsp &nbsp &nbsp
+<form action="{% url 'check' %}" method="post">
+    {% csrf_token %}
+    <input type="text" placeholder="Username" name="username"><br>
+    <input type="password" placeholder="Password" name="password"><br>
+    <input type="submit" value="login"><br>
+</form>
+<br>
+<br>
+<a href="{% url 'register' %}">Register</a>
+
+
+{% endblock %}

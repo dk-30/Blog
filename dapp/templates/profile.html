@@ -1,0 +1,11 @@
+{% block content %}
+
+{% for i in n %}
+{% ifequal i.username request.user %}
+ {{ i.caption }}<br>
+{% if i.pic %}
+ <img src="{{ i.pic.url }}" width="300px" height="300px"><br>
+{% endif %}
+{% endifequal %}
+{% endfor %}
+{% endblock %}

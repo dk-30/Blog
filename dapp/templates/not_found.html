@@ -1,0 +1,11 @@
+{% block content %}
+
+<form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="search_box" placeholder="Search"/>
+    <input type="submit" value="search" />
+</form>
+
+<h1>No such records exist!</h1>
+
+{% endblock %}

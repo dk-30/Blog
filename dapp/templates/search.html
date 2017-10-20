@@ -1,0 +1,16 @@
+{% block content %}
+
+<form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="search_box" placeholder="Search"/>
+    <input type="submit" value="search" />
+</form>
+
+{% for i in t %}
+{{ i.caption }}<br>
+    <a href="{% url 'del' i.id %}">Delete</a>
+    <a href="{% url 'edit' i.id %}">Edit</a>
+<hr width="500px" align="left" />
+{% endfor %}
+
+{% endblock %}
